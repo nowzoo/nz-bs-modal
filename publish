@@ -6,3 +6,13 @@ git commit -m 'preparing clean release'
 npm version $version
 cd projects/modal
 npm version $version
+cd $pwd
+ng build --aot --prod
+ng build modal --prod
+cp README.md dist/modal
+cp LICENSE dist/modal
+git push origin master
+git push origin --tags
+cd dist/modal
+npm publish
+cd pwd
