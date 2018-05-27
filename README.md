@@ -69,16 +69,19 @@ Insert the component selector `<nz-bs-modal></nz-bs-modal>` at the bottom of `ap
 </div>
 <nz-bs-modal></nz-bs-modal>
 ```
-#### Use the service to display modals
+#### Use the service to display modals from other components
 
-First, add an `<ng-template>` to your component's template. Make sure to reference it with a template reference variable, e.g. `#myModal`. It should contain at least a `.modal-body` div.
+First, add an `<ng-template>` to your component's template. Make sure to reference it with a template reference variable, e.g. `#modal`. It should contain at least a `.modal-body` div.
 
 ```html
 <!-- in my.component.html -->
-<ng-template #myModal>
+<p>
+  <button class="btn btn-primary btn-lg" (click)="showModal()">Show Modal</button>
+</p>
+<ng-template #modal>
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" [attr.id]="modalLabelledById">My Demo Modal</h5>
+      <h5 class="modal-title" [attr.id]="modalLabelledById">What's Up?</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -94,18 +97,31 @@ First, add an `<ng-template>` to your component's template. Make sure to referen
 </ng-template>
 ```
 
-Instantiate your component class with the `ModalService` and a reference to the modal template...
+Instantiate your component class with the `ModalService` and a reference to the modal template and provide some method to show the modal...
 ```ts
-// my.component.ts...
 import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { ModalService } from 'nzbs-modal';
-// etc...
-export class MyComponent {
-  @ViewChild('myModal') myModal: TemplateRef<any>;
-  constructor(private modalService: ModalService) { }
-  // etc...
+
+@Component({
+  selector: 'app-minimal-demo',
+  templateUrl: './minimal-demo.component.html',
+  styleUrls: ['./minimal-demo.component.scss']
+})
+export class MinimalDemoComponent {
+  @ViewChild('modal') modal: TemplateRef<any>;
+  constructor(
+    private modalService: ModalService
+  ) { }
+
+  showModal() {
+    this.modalService.show(this.modal);
+  }
 }
 ```
+[View full source](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/minimal-demo) for this minima example.
+
+
+
 
 
 

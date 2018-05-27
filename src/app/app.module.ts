@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeRouteComponent } from './home-route/home-route.component';
 import { OtherRouteComponent } from './other-route/other-route.component';
 import { ModalFormComponent } from './modal-form/modal-form.component';
+import { MinimalDemoComponent } from './minimal-demo/minimal-demo.component';
 
 const routes: Routes = [
   {path: '', component: HomeRouteComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
     AppComponent,
     HomeRouteComponent,
     OtherRouteComponent,
-    ModalFormComponent
+    ModalFormComponent,
+    MinimalDemoComponent
   ],
   imports: [
     BrowserModule,
