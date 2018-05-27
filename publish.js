@@ -23,13 +23,15 @@ const writeFile = promisify(require('fs').writeFile);
 const simpleGit = require('simple-git/promise')(cwd);
 const defaultSpawnOpts = {
   cwd: undefined,
-  env: process.env
+  env: process.env,
+  stdio: 'inherit'
 };
 
 writeFile(path.join(cwd, 'VERSION'), `${version} ${date}`)
   .then(() => simpleGit.add('-A'))
-  .then(() => simpleGit.commit(`-a -m 'preparing clean release v${version}'`))
+  .then(() => simpleGit.commit(`preparing clean release v${version}`))
   .then(() => spawnP('npm', ['version', version], defaultSpawnOpts))
+  .then(() => spawnP('ng', ['build', '--aot', '--prod'], defaultSpawnOpts))
   .catch(console.error);
 
 
