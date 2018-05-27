@@ -1,13 +1,11 @@
 {
   "name": "nzbs-modal",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "repository": {
     "type": "git",
     "url": "https://github.com/nowzoo/nz-bs-modal.git"
   },
-  "scripts": {
-    "publish": "npm version patch && ng build modal && cp ../../README.md ../../dist/modal && cd ../../dist/modal && npm publish"
-  },
+  "license" : "MIT",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
