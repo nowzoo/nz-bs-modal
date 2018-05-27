@@ -27,6 +27,7 @@ writeFile(path.join(cwd, 'VERSION'), `${version} ${date}`)
   .then(() => simpleGit.add('-A'))
   .then(() => simpleGit.commit(`-a -m 'preparing clean release v${version}'`))
   .then(() => spawnP('npm version', [version], {stdio: 'inherit', cwd: cwd}))
+  .catch(console.error);
 
 
 // const command = `cd ${cwd} && npm version ${version} && \
