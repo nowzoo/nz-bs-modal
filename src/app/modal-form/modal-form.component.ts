@@ -9,6 +9,7 @@ import { ModalService, IModalOptions } from 'nzbs-modal';
 export class ModalFormComponent implements OnInit {
   @ViewChild('modal') modal: TemplateRef<any>;
   id = 'app-modal-form';
+  modalLabelledById: string;
   fg: FormGroup;
   options: IModalOptions;
   constructor(
@@ -17,6 +18,7 @@ export class ModalFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.modalLabelledById = this.modalService.getLabelledById();
     this.fg = this.fb.group({
       animate: [true],
       size: [null],

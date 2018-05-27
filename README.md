@@ -34,7 +34,16 @@ Alternately, you can include the Bootstrap styles in your app stylesheet...
 // more styles...
 ```
 
-### Import ModalModule
+### Usage
+
+The library comes with two things:
+ - The `ModalService` which your components will use to show modals.
+ - a `ModalComponent` which is meant to be a "singleton." You only need one of these in your app, and it should be placed as high up in the DOM as possible, for example, at the end of your `AppComponent` template. You can pass in some default options if you don't like the built in ones. After that, you really don't have to worry about it.
+
+#### Import the ModalModule in your app module
+
+We only want to have one instance of the Modal Service, so call `ModalModule.forRoot()`. [See a full example](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/app.module.ts#L1).
+
 
 ```ts
 // src/app/app.module.ts
@@ -51,10 +60,57 @@ export class AppModule { }
 ```
 
 
+#### Add the ModalComponent to your app component
+Insert the component selector `<nz-bs-modal></nz-bs-modal>` at the bottom of `app.component.html`. [Full example](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/app.component.html#L1)
+```html
+<!-- app.component.html -->
+<div style="padding-top:56px">
+  <router-outlet></router-outlet>
+</div>
+<nz-bs-modal></nz-bs-modal>
+```
+#### Use the service to display modals
 
-- Define a modal using `<ng-template>`.
-- Show the modal from a parent component with `modalService.show(myTemplate, myOptions)`.
+First, add an `<ng-template>` to your component's template. Make sure to reference it with a template reference variable, e.g. `#myModal`. It should contain at least a `.modal-body` div.
 
+```html
+<!-- in my.component.html -->
+<ng-template #myModal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" [attr.id]="modalLabelledById">My Demo Modal</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Hey! Here's some modal content.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary"
+        data-dismiss="modal">Close Modal</button>
+    </div>
+  </div>
+</ng-template>
+```
+
+Instantiate your component class with the `ModalService` and a reference to the modal template...
+```ts
+// my.component.ts...
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { ModalService } from 'nzbs-modal';
+// etc...
+export class MyComponent {
+  @ViewChild('myModal') myModal: TemplateRef<any>;
+  constructor(private modalService: ModalService) { }
+  // etc...
+}
+```
+
+
+
+
+## Development
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 ## Development server
