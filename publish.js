@@ -31,7 +31,7 @@ writeFile(path.join(cwd, 'VERSION'), `${version} ${date}`)
   .then(() => simpleGit.add('-A'))
   .then(() => simpleGit.commit(`preparing clean release v${version}`))
   .then(() => spawnP('npm', ['version', version], defaultSpawnOpts))
-  .then(() => spawnP('ng', ['build', '--aot', '--prod'], defaultSpawnOpts))
+  .then(() => spawnP('ng build', ['--aot', '--prod'], defaultSpawnOpts))
   .then(() => console.log('done'))
   .catch(console.error);
 
