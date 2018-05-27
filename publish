@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+pwd=$(pwd)
+version=$1
 git add -A
 git commit -m 'preparing clean release'
-npm version patch
+npm version $version
 ng build --aot --prod
-ng build modal --aot --prod
+ng build modal --prod
