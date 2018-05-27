@@ -3,3 +3,4 @@ git add -A
 git commit -m 'preparing clean release'
 npm version patch
 ng build --aot --prod
+ng build modal --aot --prod
