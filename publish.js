@@ -21,12 +21,15 @@ const readmeSrc = path.join(cwd, 'README.md');
 const date = new Date().toGMTString();
 const writeFile = promisify(require('fs').writeFile);
 const simpleGit = require('simple-git/promise')(cwd);
-
+const defaultSpawnOpts = {
+  cwd: undefined,
+  env: process.env
+};
 
 writeFile(path.join(cwd, 'VERSION'), `${version} ${date}`)
   .then(() => simpleGit.add('-A'))
   .then(() => simpleGit.commit(`-a -m 'preparing clean release v${version}'`))
-  //.then(() => spawnP('npm version', [version], {stdio: 'inherit', cwd: cwd}))
+  .then(() => spawnP('npm version', [version], defaultSpawnOpts))
   .catch(console.error);
 
 
