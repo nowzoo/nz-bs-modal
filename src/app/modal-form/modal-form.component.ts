@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { ModalService, IModalOptions } from 'modal';
+import { ModalService, IModalOptions } from 'nzbs-modal';
 @Component({
   selector: 'app-modal-form',
   templateUrl: './modal-form.component.html',
