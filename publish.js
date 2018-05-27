@@ -20,7 +20,7 @@ const licenseSrc = path.join(cwd, 'LICENSE');
 const readmeSrc = path.join(cwd, 'README.md');
 const date = new Date().toGMTString();
 const writeFile = promisify(require('fs').writeFile);
-const simpleGit = require('simple-git')(cwd);
+const simpleGit = require('simple-git/promise')(cwd);
 
 
 writeFile(path.join(cwd, 'VERSION'), `${version} ${date}`)
