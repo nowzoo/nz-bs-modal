@@ -69,7 +69,9 @@ export class ModalComponent implements OnInit {
     if (opts) {
       this.options = Object.assign({}, this.options, opts);
     }
+    console.log(this.options);
   }
+
 
   show(templateRef: TemplateRef<any>, options?: IModalOptions): IModalInstance {
     this.setOptions(options);
@@ -81,11 +83,6 @@ export class ModalComponent implements OnInit {
     $el.one('shown.bs.modal', this.emitEvent.bind(this));
     $el.one('hide.bs.modal', this.emitEvent.bind(this));
     $el.one('hidden.bs.modal', this.emitEvent.bind(this));
-
-
-
-
-
 
     const shown = (): Promise<any> => {
       return new Promise(resolve => {
@@ -117,7 +114,7 @@ export class ModalComponent implements OnInit {
     const routerSub: Subscription = this.router.events
       .pipe(filter(e => e instanceof ActivationEnd))
       .subscribe(() => {
-        if (options.dismissOnRouteChange) {
+        if (this.options.dismissOnRouteChange) {
           instance.hide();
         }
       });
@@ -129,9 +126,9 @@ export class ModalComponent implements OnInit {
 
     const bsOptions: any = {
       show: true,
-      backdrop: options.backdrop,
-      keyboard: options.keyboard,
-      focus: options.focus
+      backdrop: this.options.backdrop,
+      keyboard: this.options.keyboard,
+      focus: this.options.focus
     };
     setTimeout(() => {
       $el.modal(bsOptions);

@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { ModalService } from 'nzbs-modal';
+import { ModalService } from '../../../projects/modal/src/public_api';
 
 @Component({
   selector: 'app-minimal-demo',

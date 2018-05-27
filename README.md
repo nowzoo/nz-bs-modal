@@ -61,7 +61,7 @@ export class AppModule { }
 
 
 #### Add the ModalComponent to your app component
-Insert the component selector `<nz-bs-modal></nz-bs-modal>` at the bottom of `app.component.html`. [Full example](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/app.component.html#L1)
+Insert the component selector `<nz-bs-modal></nz-bs-modal>` at the bottom of `app.component.html`. [Full example](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/app.component.html#L1).
 ```html
 <!-- app.component.html -->
 <div style="padding-top:56px">
@@ -69,7 +69,7 @@ Insert the component selector `<nz-bs-modal></nz-bs-modal>` at the bottom of `ap
 </div>
 <nz-bs-modal></nz-bs-modal>
 ```
-#### Use the service to display modals from other components
+#### Minimal Example: Use the service to display modals from other components
 
 First, add an `<ng-template>` to your component's template. Make sure to reference it with a template reference variable, e.g. `#modal`. It should contain at least a `.modal-body` div.
 
@@ -118,8 +118,11 @@ export class MinimalDemoComponent {
   }
 }
 ```
-[View full source](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/minimal-demo) for this minima example.
+[View full source](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/minimal-demo) for this minimal example.
 
+#### Hiding a modal
+
+In the minimal example above, we used the native Bootstrap `data-dismiss="modal"` attribute to close the modal. Modals can also be closed programmatically, for example, after a successful form submission. `ModalService.show()` returns an instance of `IModalInstance`, which comes with a `hide()` method
 
 
 
