@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalModule } from 'nzbs-modal';
+import { NzBsModalModule } from 'nzbs-modal';
 
 import { AppComponent } from './app.component';
 import { HomeRouteComponent } from './home-route/home-route.component';
@@ -44,7 +44,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
-    ModalModule.forRoot()
+    NzBsModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

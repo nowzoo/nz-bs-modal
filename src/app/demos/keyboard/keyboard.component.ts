@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ModalService } from 'nzbs-modal';
+import { NzBsModalService } from 'nzbs-modal';
 @Component({
   selector: 'app-keyboard',
   templateUrl: './keyboard.component.html',
@@ -12,7 +12,7 @@ export class KeyboardComponent implements OnInit {
   formId = 'app-animation';
   modalLabelledById: string;
   fc: FormControl;
-  constructor(private modalService: ModalService) { }
+  constructor(private modalService: NzBsModalService) { }
 
   ngOnInit() {
     this.modalLabelledById = this.modalService.getLabelledById();

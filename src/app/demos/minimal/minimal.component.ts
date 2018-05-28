@@ -1,5 +1,5 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { ModalService } from 'nzbs-modal';
+import { NzBsModalService } from 'nzbs-modal';
 @Component({
   selector: 'app-minimal',
   templateUrl: './minimal.component.html',
@@ -9,7 +9,7 @@ export class MinimalComponent {
 
   @ViewChild('modal') modal: TemplateRef<any>;
   constructor(
-    private modalService: ModalService
+    private modalService: NzBsModalService
   ) { }
 
   showModal() {

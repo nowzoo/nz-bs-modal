@@ -1,5 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { ModalService, IModalInstance } from 'nzbs-modal';
+import { NzBsModalService, IModalInstance } from 'nzbs-modal';
 
 @Component({
   selector: 'app-handle-update',
@@ -46,7 +46,7 @@ export class HandleUpdateComponent implements OnInit {
   short = `A short message.`;
   isShort = true;
   constructor(
-    private modalService: ModalService
+    private modalService: NzBsModalService
   ) { }
 
   ngOnInit() {
