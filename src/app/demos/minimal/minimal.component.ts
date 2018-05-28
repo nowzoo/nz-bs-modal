@@ -15,5 +15,4 @@ export class MinimalComponent {
   showModal() {
     this.modalService.show(this.modal);
   }
-
 }
