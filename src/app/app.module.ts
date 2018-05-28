@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ModalModule } from '../../projects/modal/src/public_api';
+import { ModalModule } from 'nzbs-modal';
 
 import { AppComponent } from './app.component';
 import { HomeRouteComponent } from './home-route/home-route.component';

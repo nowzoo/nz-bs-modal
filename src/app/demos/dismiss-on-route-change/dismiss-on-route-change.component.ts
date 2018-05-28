@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ModalService } from '../../../../projects/modal/src/public_api';
+import { ModalService } from 'nzbs-modal';
 @Component({
   selector: 'app-dismiss-on-route-change',
   templateUrl: './dismiss-on-route-change.component.html',

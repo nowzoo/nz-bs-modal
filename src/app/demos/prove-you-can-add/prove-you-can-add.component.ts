@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { ModalService, IModalInstance } from '../../../../projects/modal/src/public_api';
+import { ModalService, IModalInstance } from 'nzbs-modal';
 @Component({
   selector: 'app-prove-you-can-add',
   templateUrl: './prove-you-can-add.component.html',

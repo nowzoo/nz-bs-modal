@@ -1,5 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { ModalService, IModalInstance } from '../../../../projects/modal/src/public_api';
+import { ModalService, IModalInstance } from 'nzbs-modal';
 
 @Component({
   selector: 'app-events',
