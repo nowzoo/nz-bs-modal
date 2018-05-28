@@ -192,38 +192,23 @@ The service for showing modals.
 
 
 
-## Contributing
-Contributions are welcome. Clone this repo to develop.
+## Development
+PRs, suggestions and issues are welcome. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 **NB** Library support in the CLI is (IMHO) still a work in progress and less than intuitive. Any ideas on how to restructure the project are more than welcome.
 
-- The library code is found in `projects/nz-bs-modal/src`
-- The demo code (i.e., the app) is found in `app/src`
+- The library code is found in `projects/nz-bs-modal/src`.
+- The demo code (i.e., the app) is found in `app/src`.
 - In order to develop both the library and and the demo code simultaneously, change all the library imports in the demo code from `nzbs-modal` (which should pick up the node module) to `@nzbs-modal` (which is defined as a path in `tsconfig.json`.)
+
+### Unit tests
 - Run `ng test nz-bs-modal` to execute the unit tests for the library
+- Run `ng test` to execute the unit tests for the demos.
 
-## Development server
-
+### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+[MIT](https://github.com/nowzoo/nz-bs-modal/blob/master/LICENSE)
