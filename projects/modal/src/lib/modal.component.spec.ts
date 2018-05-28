@@ -1,13 +1,13 @@
 import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { EventEmitter} from '@angular/core';
-import { ModalComponent } from './modal.component';
-import { ModalService } from './modal.service';
+import { NzBsModalComponent } from './modal.component';
+import { NzBsModalService } from './modal.service';
 import { Router, ActivationEnd } from '@angular/router';
 import { Subject } from 'rxjs';
 
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
+describe('NzBsModalComponent', () => {
+  let component: NzBsModalComponent;
+  let fixture: ComponentFixture<NzBsModalComponent>;
   let modalSvc;
   let el, elementRef, $el;
   let routerEvents$: Subject<any>;
@@ -27,14 +27,14 @@ describe('ModalComponent', () => {
       getLabelledById: jasmine.createSpy().and.returnValue('foo')
     };
     TestBed.configureTestingModule({
-      declarations: [ ModalComponent ],
+      declarations: [ NzBsModalComponent ],
       providers: [
-        {provide: ModalService, useValue: modalSvc},
+        {provide: NzBsModalService, useValue: modalSvc},
         {provide: Router, useValue: {events: routerEvents$.asObservable()}}
       ]
     })
     .compileComponents();
-    fixture = TestBed.createComponent(ModalComponent);
+    fixture = TestBed.createComponent(NzBsModalComponent);
     component = fixture.componentInstance;
   });
 

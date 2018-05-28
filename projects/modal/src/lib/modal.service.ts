@@ -6,7 +6,7 @@ import { IModalInstance, IModalComponent, IModalOptions } from './interfaces';
 @Injectable({
   providedIn: 'root'
 })
-export class ModalService {
+export class NzBsModalService {
 
   private component: IModalComponent;
 

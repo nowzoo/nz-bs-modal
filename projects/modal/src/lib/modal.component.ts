@@ -5,7 +5,7 @@ import { Router, ActivationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 import { IModalInstance, IModalComponent, IModalOptions } from './interfaces';
-import { ModalService } from './modal.service';
+import { NzBsModalService } from './modal.service';
 
 declare const jQuery: any;
 
@@ -32,7 +32,7 @@ declare const jQuery: any;
   `,
   styles: []
 })
-export class ModalComponent implements OnInit {
+export class NzBsModalComponent implements OnInit {
 
   @Input() defaultOptions: IModalOptions;
   @ViewChild('modal', {read: ElementRef}) modal: ElementRef;
@@ -44,7 +44,7 @@ export class ModalComponent implements OnInit {
 
 
   constructor(
-    private modalSvc: ModalService,
+    private modalSvc: NzBsModalService,
     private router: Router
   ) { }
 

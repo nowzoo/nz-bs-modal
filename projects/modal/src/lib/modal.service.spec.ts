@@ -1,16 +1,16 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ModalService } from './modal.service';
+import { NzBsModalService } from './modal.service';
 
-describe('ModalService', () => {
+describe('NzBsModalService', () => {
   let service;
   let component: any;
   beforeEach(() => {
     component = {show: jasmine.createSpy()};
     TestBed.configureTestingModule({
-      providers: [ModalService]
+      providers: [NzBsModalService]
     });
-    service = TestBed.get(ModalService);
+    service = TestBed.get(NzBsModalService);
   });
 
   it('should be created', () => {

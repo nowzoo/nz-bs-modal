@@ -1,21 +1,21 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { ModalComponent } from './modal.component';
-import { ModalService } from './modal.service';
+import { NzBsModalComponent } from './modal.component';
+import { NzBsModalService } from './modal.service';
 
 @NgModule({
   imports: [
     RouterModule
   ],
-  declarations: [ModalComponent],
-  exports: [ModalComponent],
-  providers: [ModalService]
+  declarations: [NzBsModalComponent],
+  exports: [NzBsModalComponent],
+  providers: [NzBsModalService]
 })
-export class ModalModule {
+export class NzBsModalModule {
   public static forRoot(): ModuleWithProviders {
-    return {ngModule: ModalModule, providers: [
-      ModalService
+    return {ngModule: NzBsModalModule, providers: [
+      NzBsModalService
     ]};
   }
 }
