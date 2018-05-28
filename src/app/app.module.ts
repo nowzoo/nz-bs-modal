@@ -18,6 +18,7 @@ import { MinimalComponent } from './demos/minimal/minimal.component';
 import { ProveYouCanAddComponent } from './demos/prove-you-can-add/prove-you-can-add.component';
 import { EventsComponent } from './demos/events/events.component';
 import { HandleUpdateComponent } from './demos/handle-update/handle-update.component';
+import { FragmentDirective } from './fragment.directive';
 
 const routes: Routes = [
   {path: '', component: HomeRouteComponent},
@@ -38,7 +39,8 @@ const routes: Routes = [
     MinimalComponent,
     ProveYouCanAddComponent,
     EventsComponent,
-    HandleUpdateComponent
+    HandleUpdateComponent,
+    FragmentDirective
   ],
   imports: [
     BrowserModule,
