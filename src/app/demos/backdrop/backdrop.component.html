@@ -1,0 +1,71 @@
+
+<div class="d-flex align-items-center mb-2">
+  <div class="mr-4">
+    <div class="form-check">
+      <input
+        [attr.id]="formId + 'true'"
+        class="form-check-input"
+        type="radio"
+        name="backdrop"
+        [formControl]="fc"
+        [value]="true">
+      <label class="form-check-label" [attr.for]="formId + 'true'">true (default)</label>
+    </div>
+    <div class="form-check">
+      <input
+        [attr.id]="formId + 'static'"
+        class="form-check-input"
+        type="radio"
+        [formControl]="fc"
+        name="backdrop"
+        [value]="'static'">
+      <label class="form-check-label" [attr.for]="formId + 'static'">static</label>
+    </div>
+    <div class="form-check">
+      <input
+        [attr.id]="formId + 'false'"
+        class="form-check-input"
+        type="radio"
+        name="backdrop"
+        [formControl]="fc"
+        [value]="false">
+      <label class="form-check-label" [attr.for]="formId + 'false'">false</label>
+    </div>
+  </div>
+
+  <div class="mr-2">
+    <button type="button" class="btn btn-primary btn-lg" (click)="showModal()">
+      Show Modal
+    </button>
+  </div>
+</div>
+
+
+<ng-template #modal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" [attr.id]="modalLabelledById">Backdrop Demo</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>
+        options.backdrop = {{fc.value | json}}
+      </p>
+      <p *ngIf="'static' === fc.value">
+        The backdrop is shown. Clicking on it does not dismiss the modal.
+      </p>
+      <p *ngIf="false === fc.value">
+        No backdrop is shown.
+      </p>
+      <p *ngIf="true === fc.value">
+        The backdrop is shown. Clicking on it dismisses the modal.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary"
+        data-dismiss="modal">Close Modal</button>
+    </div>
+  </div>
+</ng-template>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalFormComponent } from './modal-form.component';
+import { ProveYouCanAddComponent } from './prove-you-can-add.component';
 
-describe('ModalFormComponent', () => {
-  let component: ModalFormComponent;
-  let fixture: ComponentFixture<ModalFormComponent>;
+describe('ProveYouCanAddComponent', () => {
+  let component: ProveYouCanAddComponent;
+  let fixture: ComponentFixture<ProveYouCanAddComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalFormComponent ]
+      declarations: [ ProveYouCanAddComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalFormComponent);
+    fixture = TestBed.createComponent(ProveYouCanAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

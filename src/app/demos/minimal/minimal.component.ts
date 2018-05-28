@@ -1,12 +1,12 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
-import { ModalService } from '../../../projects/modal/src/public_api';
-
+import { ModalService } from '../../../../projects/modal/src/public_api';
 @Component({
-  selector: 'app-minimal-demo',
-  templateUrl: './minimal-demo.component.html',
-  styleUrls: ['./minimal-demo.component.scss']
+  selector: 'app-minimal',
+  templateUrl: './minimal.component.html',
+  styleUrls: ['./minimal.component.scss']
 })
-export class MinimalDemoComponent {
+export class MinimalComponent {
+
   @ViewChild('modal') modal: TemplateRef<any>;
   constructor(
     private modalService: ModalService
@@ -15,4 +15,5 @@ export class MinimalDemoComponent {
   showModal() {
     this.modalService.show(this.modal);
   }
+
 }

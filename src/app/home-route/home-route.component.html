@@ -1,26 +1,143 @@
 
 
 <div class="container">
-  <h1 class="display-4 my-4">nz-bs-modal</h1>
+  <h1 class="display-3 my-4">nz-bs-modal</h1>
   <hr>
-  <h2>Minimal Demo</h2>
-  <app-minimal-demo></app-minimal-demo>
-  <p>
-    Source code:
-    <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/minimal-demo/minimal-demo.component.ts">Typescript</a>
-    |
-    <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/minimal-demo/minimal-demo.component.html">HTML</a>
-  </p>
+  <section id="minimal">
+    <h2 class="display-6">Minimal</h2>
+    <app-minimal></app-minimal>
+    <p>
+      A minimal, if not entirely nugatory, case.
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/minimal/minimal.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/minimal/minimal.component.html">HTML</a>
+    </p>
+  </section>
 
-  <h2>Closing Modals Programmatically</h2>
-  <app-form-demo></app-form-demo>
-  <p>
-    Source code:
-    <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/form-demo/form-demo.component.ts">Typescript</a>
-    |
-    <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/form-demo/form-demo.component.html">HTML</a>
-  </p>
 
-  <h2>Play with Options</h2>
-  <app-modal-form></app-modal-form>
+  <section id="animate">
+    <h2 class="display-6">options.animate</h2>
+    <app-animation></app-animation>
+    <p>
+      Animate the modal?
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/animation/animation.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/animation.animation.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="size">
+    <h2 class="display-6">options.size</h2>
+    <app-size></app-size>
+    <p>
+      Modal bigness. Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/size/size.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/size/size.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="backdrop">
+    <h2 class="display-6">options.backdrop</h2>
+    <app-backdrop></app-backdrop>
+    <p>
+      Display a backdrop? If so, does clicking on it dismiss the modal? Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/backdrop/backdrop.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/backdrop/backdrop.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="centered">
+    <h2 class="display-6">options.centered</h2>
+    <app-centered></app-centered>
+    <p>
+      Center the modal vertically in the viewport? Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/centered/centered.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/centered/centered.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="keyboard">
+    <h2 class="display-6">options.keyboard</h2>
+    <app-keyboard></app-keyboard>
+    <p>
+      Does pressing the <code>esc</code> key dismiss the modal?
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/keyboard/keyboard.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/keyboard/keyboard.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="focus">
+    <h2 class="display-6">options.focus</h2>
+    <app-focus></app-focus>
+    <p>
+      Give the modal focus when shown?
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/focus/focus.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/focus/focus.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="dismissOnRouteChange">
+    <h2 class="display-6">options.dismissOnRouteChange</h2>
+    <app-dismiss-on-route-change></app-dismiss-on-route-change>
+    <p>
+      Dismiss the modal if the route changes?
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/dismiss-on-route-change/dismiss-on-route-change.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/dismiss-on-route-change/dismiss-on-route-change.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="prove-you-can-add">
+    <h2 class="display-6">modalInstance promises and hide() method</h2>
+    <app-prove-you-can-add></app-prove-you-can-add>
+    <p>
+      Demonstrates the <code>modalInstance.hide()</code> method
+      and its <code>shown()</code> and <code>hidden()</code> promises.
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/prove-you-can-add/prove-you-can-add.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/prove-you-can-add/prove-you-can-add.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="events">
+    <h2 class="display-6">Subscribe to modalInstance.events</h2>
+    <app-events></app-events>
+    <p>
+      <code>modalInstance.events</code> exposes native Bootstrap modal events as an
+      <code>Observable</code>.
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/events/events.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/events/events.component.html">HTML</a>
+    </p>
+  </section>
+
+  <section id="handle-update">
+    <h2 class="display-6">Handle modal content height changes</h2>
+    <app-handle-update></app-handle-update>
+    <p>
+      Whenever the height of the content within your modal changes,
+      you should call
+      <code>modalInstance.handleUpdate()</code>.
+      Demo source code:
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/handle-update/handle-update.component.ts">Typescript</a>
+      |
+      <a href="https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/demos/handle-update/handle-update.component.html">HTML</a>
+    </p>
+  </section>
+
+
+
+
 </div>

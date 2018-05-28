@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MinimalDemoComponent } from './minimal-demo.component';
+import { HandleUpdateComponent } from './handle-update.component';
 
-describe('MinimalDemoComponent', () => {
-  let component: MinimalDemoComponent;
-  let fixture: ComponentFixture<MinimalDemoComponent>;
+describe('HandleUpdateComponent', () => {
+  let component: HandleUpdateComponent;
+  let fixture: ComponentFixture<HandleUpdateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MinimalDemoComponent ]
+      declarations: [ HandleUpdateComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MinimalDemoComponent);
+    fixture = TestBed.createComponent(HandleUpdateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

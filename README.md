@@ -120,9 +120,11 @@ export class MinimalDemoComponent {
 ```
 [View full source](https://github.com/nowzoo/nz-bs-modal/blob/master/src/app/minimal-demo) for this minimal example.
 
+ 
+
 #### Hiding a modal
 
-In the minimal example above, we used the native Bootstrap `data-dismiss="modal"` attribute to close the modal. Modals can also be closed programmatically, for example, after a successful form submission. `ModalService.show()` returns an instance of `IModalInstance`, which comes with a `hide()` method
+In the minimal example above, we used the native Bootstrap `data-dismiss="modal"` attribute to close the modal. Modals can also be closed programmatically, for example, after a successful form submission. `ModalService.show()` returns an instance of `IModalInstance`, which comes with a `hide()` method.
 
 
 

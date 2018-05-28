@@ -62,14 +62,13 @@ export class ModalComponent implements OnInit {
       backdrop: true,
       keyboard: true,
       focus: true,
-      dismissOnRouteChange: false
+      dismissOnRouteChange: true
     };
     const passedOptions = this.defaultOptions || {};
     this.options = Object.assign({}, baseOptions, passedOptions);
     if (opts) {
       this.options = Object.assign({}, this.options, opts);
     }
-    console.log(this.options);
   }
 
 

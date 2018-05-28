@@ -3,12 +3,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalModule } from '../../projects/modal/src/public_api';
+
 import { AppComponent } from './app.component';
 import { HomeRouteComponent } from './home-route/home-route.component';
 import { OtherRouteComponent } from './other-route/other-route.component';
-import { ModalFormComponent } from './modal-form/modal-form.component';
-import { MinimalDemoComponent } from './minimal-demo/minimal-demo.component';
-import { FormDemoComponent } from './form-demo/form-demo.component';
+import { AnimationComponent } from './demos/animation/animation.component';
+import { CenteredComponent } from './demos/centered/centered.component';
+import { SizeComponent } from './demos/size/size.component';
+import { BackdropComponent } from './demos/backdrop/backdrop.component';
+import { KeyboardComponent } from './demos/keyboard/keyboard.component';
+import { FocusComponent } from './demos/focus/focus.component';
+import { DismissOnRouteChangeComponent } from './demos/dismiss-on-route-change/dismiss-on-route-change.component';
+import { MinimalComponent } from './demos/minimal/minimal.component';
+import { ProveYouCanAddComponent } from './demos/prove-you-can-add/prove-you-can-add.component';
+import { EventsComponent } from './demos/events/events.component';
+import { HandleUpdateComponent } from './demos/handle-update/handle-update.component';
 
 const routes: Routes = [
   {path: '', component: HomeRouteComponent},
@@ -19,9 +28,17 @@ const routes: Routes = [
     AppComponent,
     HomeRouteComponent,
     OtherRouteComponent,
-    ModalFormComponent,
-    MinimalDemoComponent,
-    FormDemoComponent
+    AnimationComponent,
+    CenteredComponent,
+    SizeComponent,
+    BackdropComponent,
+    KeyboardComponent,
+    FocusComponent,
+    DismissOnRouteChangeComponent,
+    MinimalComponent,
+    ProveYouCanAddComponent,
+    EventsComponent,
+    HandleUpdateComponent
   ],
   imports: [
     BrowserModule,
