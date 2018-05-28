@@ -1,0 +1,23 @@
+{
+  "name": "nzbs-modal",
+  "description": "Bootstrap modal library for Angular 6. Built on top of the Bootstrap js, with full support for modal styling, animations, options and events.",
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "modal"
+  ],
+  "homepage": "https://github.com/nowzoo/nz-bs-modal#readme",
+  "version": "1.2.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nowzoo/nz-bs-modal.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}

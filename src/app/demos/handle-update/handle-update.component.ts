@@ -1,5 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { NzBsModalService, IModalInstance } from 'nzbs-modal';
+import { NzBsModalService, INzBsModalInstance } from 'nzbs-modal';
 
 @Component({
   selector: 'app-handle-update',
@@ -10,7 +10,7 @@ export class HandleUpdateComponent implements OnInit {
 
   @ViewChild('modal') modal: TemplateRef<any>;
   modalLabelledById: string;
-  modalInstance: IModalInstance = null;
+  modalInstance: INzBsModalInstance = null;
   long = `Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   Ut enim ad minim veniam, quis nostrud exercitation ullamco

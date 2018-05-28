@@ -19,6 +19,9 @@
     "paths": {
       "modal": [
         "dist/modal"
+      ],
+      "nz-bs-modal": [
+        "dist/nz-bs-modal"
       ]
     }
   }

@@ -1,5 +1,5 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
-import { NzBsModalService, IModalInstance } from 'nzbs-modal';
+import { NzBsModalService, INzBsModalInstance } from 'nzbs-modal';
 
 @Component({
   selector: 'app-events',
@@ -10,7 +10,7 @@ export class EventsComponent implements OnInit {
   @ViewChild('modal') modal: TemplateRef<any>;
   modalLabelledById: string;
   events: any[] = [];
-  modalInstance: IModalInstance = null;
+  modalInstance: INzBsModalInstance = null;
   constructor(
     private modalService: NzBsModalService
   ) { }

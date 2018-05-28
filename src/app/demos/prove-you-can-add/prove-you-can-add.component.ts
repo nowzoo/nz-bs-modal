@@ -1,6 +1,6 @@
 import { Component, OnInit, TemplateRef, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { NzBsModalService, IModalInstance } from 'nzbs-modal';
+import { NzBsModalService, INzBsModalInstance } from 'nzbs-modal';
 @Component({
   selector: 'app-prove-you-can-add',
   templateUrl: './prove-you-can-add.component.html',
@@ -12,7 +12,7 @@ export class ProveYouCanAddComponent implements OnInit {
   formId = 'app-size';
   modalLabelledById: string;
   fg: FormGroup;
-  modalInstance: IModalInstance;
+  modalInstance: INzBsModalInstance;
   result: 'success' | 'canceled' = null;
   error = false;
   constructor(private modalService: NzBsModalService, private fb: FormBuilder) { }
