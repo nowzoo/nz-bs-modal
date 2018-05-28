@@ -25,7 +25,6 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/CNAME",
               "src/assets"
             ],
             "styles": [
@@ -128,7 +127,7 @@
         }
       }
     },
-    
+
     "nz-bs-modal": {
       "root": "projects/nz-bs-modal",
       "sourceRoot": "projects/nz-bs-modal/src",

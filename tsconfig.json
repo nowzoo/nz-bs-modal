@@ -17,9 +17,7 @@
       "dom"
     ],
     "paths": {
-      "@nzbs-modal": [
-        "projects/nz-bs-modal/src/public_api.ts"
-      ]
+      
     }
   }
 }

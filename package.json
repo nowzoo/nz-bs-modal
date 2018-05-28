@@ -9,7 +9,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prodBuild": "ng build --aot --prod",
+    "buildLib": "ng build nz-bs-modal --prod",
+    "buildDemo": "ng build --aot --prod --base-href /nz-bs-modal/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
