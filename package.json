@@ -26,7 +26,7 @@
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
     "core-js": "^2.5.4",
-    "nzbs-modal": "^1.1.20",
+    "nzbs-modal": "^1.1.22",
     "rxjs": "^6.0.0",
     "simple-git": "^1.95.0",
     "zone.js": "^0.8.26"
