@@ -2,6 +2,7 @@
 
 Bootstrap modal library for Angular 6. Built on top of the Bootstrap js, with full support for modal styling, animations, options and events.
 
+[Demo Site](https://nowzoo.github.io/nz-bs-modal)
 
 **NB:** By design this library depends on jQuery, popper.js, bootstrap.js and bootstrap.css. You need to include those scripts and styles in your build. If you are looking for a native Angular implementation, look at [ngx-bootstrap](https://github.com/valor-software/ngx-bootstrap) or [ng-bootstrap](https://ng-bootstrap.github.io).
 
@@ -151,31 +152,57 @@ This is what the modal service returns from the `show()` method. This interface 
 ### `INzBsModalOptions`
 The set of options that you can pass into the service's `show()` method. You can also pass your own defaults into the `NzBsModalComponent` instance if you don't like the following defaults.
 
-- `animate: boolean` whether or not to animate the modal in and out. Default: `true`.
+Note: All of the [Bootstrap modal options and classes](http://getbootstrap.com/docs/4.1/components/modal) except `show` are supported. In addition, we add the Angular-specific `dismissOnRouteChange` option.
+
+Note: All of the following keys are optional.
+
+- `animate?: boolean` **Default:** `true`. Whether or not to animate the modal in and out.
 [Demo](https://nowzoo.github.io/nz-bs-modal/#animate) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/animate)
-- `size: 'sm' | 'lg' | null` The size of the modal. Default: `null`.
+- `size?: 'sm' | 'lg' | null` **Default:** `null`. The size of the modal.
 [Demo](https://nowzoo.github.io/nz-bs-modal/#size) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/size)
-- `centered: boolean` whether to center the modal vertically in the viewport. Default: `false`.
+- `centered?: boolean` **Default:** `false`. Whether to center the modal vertically in the viewport.
 [Demo](https://nowzoo.github.io/nz-bs-modal/#centered) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/centered)
-- `backdrop: boolean | 'static'` Whether to display a backdrop, and if so whether clicking on it dismisses the modal. Default: `true`. This shows a backdrop that dismisses the modal. Use `static` to display a backdrop that doesn't dismiss. Use `false` to not show a backdrop.
-[Demo](https://nowzoo.github.io/nz-bs-modal/#backdrop) |
+- `backdrop?: boolean | 'static'` **Default:** `true`. Whether to display a backdrop, and if so whether clicking on it dismisses the modal.  [Demo](https://nowzoo.github.io/nz-bs-modal/#backdrop) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/backdrop)
-- `keyboard: boolean` whether or not pressing the `esc` key dismisses the modal. Default: `true`.
+    - `true` &mdash;  backdrop dismisses the modal
+    - `static` &mdash; backdrop doesn't dismiss
+    - `false` &mdash; no backdrop
+
+- `keyboard?: boolean` **Default:** `true`. Whether or not pressing the `esc` key dismisses the modal.
 [Demo](https://nowzoo.github.io/nz-bs-modal/#keyboard) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/keyboard)
-- `focus: boolean` whether or not to focus the modal when shown. Default: `true`. Note that you can alse use the `modalInstance.shown()` promise to automatically focus inputs within the modal.
+- `focus?: boolean` **Default:** `true`. Whether or not to focus the modal when shown. Note that you can also use the `modalInstance.shown()` promise to automatically focus inputs within the modal.
 [Demo](https://nowzoo.github.io/nz-bs-modal/#focus) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/focus)
-- `dismissOnRouteChange: boolean` whether or not to dismiss the modal when the route changes. Default: `true`.
+- `dismissOnRouteChange?: boolean`  **Default**: `true`. whether or not to dismiss the modal when the route changes.
 [Demo](https://nowzoo.github.io/nz-bs-modal/#dismissOnRouteChange) |
 [Demo code](https://github.com/nowzoo/nz-bs-modal/tree/master/src/app/demos/dismiss-on-route-change)
 
+### `NzBsModalComponent`
+This is the "singleton" component that you should place near the top of the DOM. It only has one input:
+- `@Input() defaultOptions: INzBsModalOptions` Use this if to globally override the default options shown above.
 
-## Development
+### `NzBsModalService`
+The service for showing modals.
+- `show(templateRef: TemplateRef<any>, options?: INzBsModalOptions): INzBsModalInstance` Show a modal given a template and (optionally) a modal options object.
+- `getLabelledById(): string` This is meant to allow you to set the id of the `<h5 class="modal-title">Title</h5>`, so as to match the modal element's `aria-labelledby` attribute. See [Bootstrap modal accessibility](http://getbootstrap.com/docs/4.1/components/modal/#accessibility).
+
+
+
+## Contributing
+Contributions are welcome. Clone this repo to develop.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+
+**NB** Library support in the CLI is (IMHO) still a work in progress and less than intuitive. Any ideas on how to restructure the project are more than welcome.
+
+- The library code is found in `projects/nz-bs-modal/src`
+- The demo code (i.e., the app) is found in `app/src`
+- In order to develop both the library and and the demo code simultaneously, change all the library imports in the demo code from `nzbs-modal` (which should pick up the node module) to `@nzbs-modal` (which is defined as a path in `tsconfig.json`.)
+- Run `ng test nz-bs-modal` to execute the unit tests for the library
 
 ## Development server
 

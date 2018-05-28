@@ -67,7 +67,7 @@ describe('NzBsModalComponent', () => {
         backdrop: true,
         keyboard: true,
         focus: true,
-        dismissOnRouteChange: false
+        dismissOnRouteChange: true
       });
     });
     it('should work if options are set in an input', () => {
@@ -80,7 +80,7 @@ describe('NzBsModalComponent', () => {
         backdrop: true,
         keyboard: true,
         focus: true,
-        dismissOnRouteChange: false
+        dismissOnRouteChange: true
       });
     });
     it('should work if options passed', () => {
@@ -92,7 +92,7 @@ describe('NzBsModalComponent', () => {
         backdrop: true,
         keyboard: true,
         focus: true,
-        dismissOnRouteChange: false
+        dismissOnRouteChange: true
       });
     });
   });
@@ -112,15 +112,16 @@ describe('NzBsModalComponent', () => {
       component.show(template, options);
       expect(component.setOptions).toHaveBeenCalledWith(options);
     });
-    it('should call $el.modal(options) with the options', () => {
+    it('should call $el.modal(options) with the options after a timeout', fakeAsync(() => {
       component.show(template, options);
+      tick();
       expect($el.modal).toHaveBeenCalledWith({
         show: true,
         backdrop: true,
         focus: true,
         keyboard: true
       });
-    });
+    }));
 
     it('should return an object with handleUpdate() function', () => {
       const instance = component.show(template);
