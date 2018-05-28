@@ -16,3 +16,7 @@ git push origin --tags
 cd dist/modal
 npm publish
 cd $pwd
+git add -A
+git commit -m 'post clean release'
+git push origin master
+git push origin --tags
