@@ -31,6 +31,11 @@
       <p>
         options.focus = {{fc.value | json}}
       </p>
+      <p>
+        Test this by hitting the <code>esc</code> key before
+        interacting with the modal.</p>
+        <p *ngIf="fc.value">The modal should close.</p>
+        <p *ngIf="!fc.value">The modal will not close, because the modal is not focused.</p>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-primary"
